@@ -1,0 +1,101 @@
+[
+  {
+    "id": "banner_bard",
+    "name": "Banner del Bardo",
+    "type": "class",
+    "class": "bard",
+    "claim_threshold": 3,
+    "effect": "Una vez por turno, tu puedes descartar una carta, entonces haz roll de dados para usar el efecto de cualquiera de tus herores en tu party inmediatamente.",
+    "image": "BardBanner.png"
+  },
+  {
+    "id": "banner_berserker",
+    "name": "Banner del Berserker",
+    "type": "class",
+    "class": "berserker",
+    "claim_threshold": 3,
+    "effect": "Una vez por turno en tu turno, tu puedes descartar 3 cartas, entonces ataca a una carta de monstruo inmediatamente (Tu desbes de cumplir los requisitos de Party listados en la carta de monstruo que atacaste).",
+    "image": "BerserkerBanner.png"
+  },
+  {
+    "id": "banner_druid",
+    "name": "Banner del Druida",
+    "type": "class",
+    "class": "druid",
+    "claim_threshold": 3,
+    "effect": "Una vez por turno en tu turno, tu puedes descartar 2 cartas, entonces, agarra 2 cartas del mazo.",
+    "image": "DruidBanner.png"
+  },
+  {
+    "id": "banner_fighter",
+    "name": "Banner del Luchador",
+    "type": "class",
+    "class": "fighter",
+    "claim_threshold": 3,
+    "effect": "Una vez por turno en tu turno, tu puedes descartar 2 cartas, entonces destruye una carta de heroe.",
+    "image": "FighterBanner.png"
+  },
+  {
+    "id": "banner_guardian",
+    "name": "Banner del Guardián",
+    "type": "class",
+    "class": "guardian",
+    "claim_threshold": 3,
+    "effect": "Una vez por turno en tu turno, tu puedes descartar una carta, entonces, busca en la pila de descarte por un modificaro y añadelo a tu mano.",
+    "image": "GuardianBanner.png"
+  },
+  {
+    "id": "banner_necromancer",
+    "name": "Banner del Nigromante",
+    "type": "class",
+    "class": "necromancer",
+    "claim_threshold": 3,
+    "effect": "Una vez por turno en tu turno, tu puedes descartar 2 cartas, entonces busca en la pila de descarte por un heroe y añadelo a tu mano. Jugealo inmediatamente.",
+    "image": "NecromancerBanner.png"
+  },
+  {
+    "id": "banner_ranger",
+    "name": "Banner del Explorador",
+    "type": "class",
+    "class": "ranger",
+    "claim_threshold": 3,
+    "effect": "Una vez por turno en tu turno, tu puedes agarrar una carta del mazo.",
+    "image": "RangerBanner.png"
+  },
+  {
+    "id": "banner_thief",
+    "name": "Banner del Ladrón",
+    "type": "class",
+    "class": "thief",
+    "claim_threshold": 3,
+    "effect": "Una vez por turno en tu turno, tu puedes descartar 3 cartas, entonces roba una carta de heroe.",
+    "image": "ThieftBanner.png"
+  },
+  {
+    "id": "banner_warrior",
+    "name": "Banner del Guerrero",
+    "type": "class",
+    "class": "warrior",
+    "claim_threshold": 3,
+    "effect": "Una vez por turno en tu turno, tu puedes descartar una carta, entonces juega una carta de item inmediatamente.",
+    "image": "WarriorBanner.png"
+  },
+  {
+    "id": "banner_wizard",
+    "name": "Banner del Mago",
+    "type": "class",
+    "class": "wizard",
+    "claim_threshold": 3,
+    "effect": "Una vez por turno en tu turno, tu puedes descartar una carta, entonces juega una carta de magia inmediatamente.",
+    "image": "WizardBanner.png"
+  },
+  {
+    "id": "banner_hunters_trophy",
+    "name": "Trofeo del Cazador",
+    "type": "trophy",
+    "class": null,
+    "claim_threshold": null,
+    "effect": "Una vez por turno en tu turno, +1 a tu tirada cuando ATACAS un Monstruo. Se transfiere al jugador que derrota un monstruo.",
+    "image": "HuntersTrophyBanner.png"
+  }
+]

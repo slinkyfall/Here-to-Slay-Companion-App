@@ -1,0 +1,82 @@
+[
+  {
+    "id": "base_charismatic_song",
+    "name": "The Charismatic Song",
+    "class": "bard",
+    "expansion": "base",
+    "ability": "Cada vez que haces una tirada para usar el efecto de una carta de heroes, +1 a esa tirada.",
+    "image": "TheCharismaticSong.png"
+  },
+  {
+    "id": "base_cloaked_sage",
+    "name": "The Cloaked Sage",
+    "class": "wizard",
+    "expansion": "base",
+    "ability": "Cada vez que juegas una carta de magia, agarra una carta del mazo.",
+    "image": "TheCloakedSage.png"
+  },
+  {
+    "id": "base_divine_arrow",
+    "name": "The Divine Arrow",
+    "class": "ranger",
+    "expansion": "base",
+    "ability": "Cada vez que haces una tirada para atacar una carta de monstruo, +1 a esa tirada.",
+    "image": "TheDivineArrow.png"
+  },
+  {
+    "id": "base_fist_of_reason",
+    "name": "The Fist of Reason",
+    "class": "fighter",
+    "expansion": "base",
+    "ability": "Cada vez que haces una tirada para un desafio, +2 a esa tirada.",
+    "image": "TheFistOfReason.png"
+  },
+  {
+    "id": "base_protecting_horn",
+    "name": "The Protecting Horn",
+    "class": "guardian",
+    "expansion": "base",
+    "ability": "Cada vez que tu jugeas un modificador en una tirada, +1 o -1 a esa tirada.",
+    "image": "TheProtectingHorn.png"
+  },
+  {
+    "id": "base_shadow_claw",
+    "name": "The Shadow Claw",
+    "class": "thief",
+    "expansion": "base",
+    "ability": "Una vez por turno, en tu turno, tu puedes gastar un punto de acción para robar una carta de la mano de otro jugador.",
+    "image": "TheShadowClaw.png"
+  },
+  {
+    "id": "wd_noble_shaman",
+    "name": "The Noble Shaman",
+    "class": "druid",
+    "expansion": "warriors_druids",
+    "ability": "Una vez por turno, durante el turno de cada jugador, puedes elegir la tirada de cualquier jugador. -1 a esa tirada.",
+    "image": "TheNobleShaman.png"
+  },
+  {
+    "id": "wd_piercing_howl",
+    "name": "The Piercing Howl",
+    "class": "warrior",
+    "expansion": "warriors_druids",
+    "ability": "Cada vez que lances el dado, suma +1 a tu tirada por cada carta de objeto equipada en una carta de héroe de tu grupo.",
+    "image": "ThePiercingHowl.png"
+  },
+  {
+    "id": "bn_gnawing_dread",
+    "name": "The Gnawing Dread",
+    "class": "necromancer",
+    "expansion": "berserkers_necromancers",
+    "ability": "Una vez por turno en tu turno, tu puedes gastar 2 puntos de acción para buscar en la pila de descarte por una carta y añadirla a tu mano.",
+    "image": "TheGnawingDread.png"
+  },
+  {
+    "id": "bn_raging_manticore",
+    "name": "The Raging Manticore",
+    "class": "berserker",
+    "expansion": "berserkers_necromancers",
+    "ability": "Cada vez que cazas a una carta de monstruo, agarra 2 cartas del mazo.",
+    "image": "TheRagingManticore.png"
+  }
+]
