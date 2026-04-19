@@ -215,11 +215,18 @@ function removePlayer(roomId, socketId) {
 
 /**
  * Asigna un líder a un jugador.
+ * Valida que ningún otro jugador tenga ya ese líder.
  */
 function setLeader(roomId, socketId, leaderId, leaderClass) {
   const room   = rooms.get(roomId)
   const player = room?.players.find(p => p.id === socketId)
   if (!player) return { success: false, error: 'Jugador no encontrado.' }
+
+  // Verificar que nadie más tenga ese líder
+  const takenBy = room.players.find(p => p.id !== socketId && p.leaderId === leaderId)
+  if (takenBy) {
+    return { success: false, error: `${takenBy.name} ya tiene ese líder. Elige otro.` }
+  }
 
   player.leaderId    = leaderId
   player.leaderClass = leaderClass
@@ -413,9 +420,39 @@ function addLog(room, message) {
   if (room.actionLog.length > 50) room.actionLog.pop()
 }
 
+/**
+ * Crea una copia 100% serializable del estado de sala para Socket.io.
+ * Usa JSON round-trip con replacer para eliminar:
+ *   - Campos internos (_cleanupTimer, _xxx)
+ *   - Referencias circulares (Timeout objects de Node.js)
+ *   - Funciones u otros no-serializables
+ */
+function sanitizeRoom(room) {
+  if (!room) return null
+  const seen = new WeakSet()
+  try {
+    return JSON.parse(JSON.stringify(room, (key, value) => {
+      // Eliminar cualquier campo interno (prefijo _)
+      if (typeof key === 'string' && key.startsWith('_')) return undefined
+      // Detectar y cortar referencias circulares
+      if (value !== null && typeof value === 'object') {
+        if (seen.has(value)) return undefined
+        seen.add(value)
+      }
+      // Eliminar funciones
+      if (typeof value === 'function') return undefined
+      return value
+    }))
+  } catch (err) {
+    console.error('[sanitizeRoom] Error al serializar sala:', err.message)
+    return null
+  }
+}
+
 export {
   createRoom, getRoom,
   addPlayer, removePlayer, setLeader, setPlayerName,
   startGame, updateClassCount, slayMonster,
-  adminForceUpdate, resetGame
+  adminForceUpdate, resetGame,
+  sanitizeRoom,
 }

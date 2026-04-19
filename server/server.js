@@ -14,7 +14,8 @@ import {
   createRoom, getRoom,
   addPlayer, removePlayer, setLeader, setPlayerName,
   startGame, updateClassCount, slayMonster,
-  adminForceUpdate, resetGame
+  adminForceUpdate, resetGame,
+  sanitizeRoom,
 } from './gameState.js'
 
 // -------------------------------------------------------------------
@@ -54,7 +55,7 @@ app.get('/api/health', (req, res) => {
 app.get('/api/room/:roomId', (req, res) => {
   const room = getRoom(req.params.roomId.toUpperCase())
   if (!room) return res.status(404).json({ error: 'Sala no encontrada.' })
-  res.json(room)
+  res.json(sanitizeRoom(room))   // También sanitizar en el endpoint REST
 })
 
 // -------------------------------------------------------------------
@@ -63,7 +64,8 @@ app.get('/api/room/:roomId', (req, res) => {
 function broadcastState(roomId) {
   const room = getRoom(roomId)
   if (room) {
-    io.to(roomId).emit('gameStateUpdate', room)
+    // sanitizeRoom elimina _cleanupTimer y cualquier campo no-serializable
+    io.to(roomId).emit('gameStateUpdate', sanitizeRoom(room))
   }
 }
 
@@ -116,7 +118,12 @@ io.on('connection', (socket) => {
       currentRoomId = id
       socket.join(id)
 
-      console.log(`[Sala] ${socket.id} se unió a ${id}`)
+      if (result.reconnected) {
+        console.log(`[Sala] ${name} RECONECTADO a ${id} (nuevo socket: ${socket.id})`)
+      } else {
+        console.log(`[Sala] ${socket.id} se unió a ${id}`)
+      }
+
       callback?.({ success: true, roomId: id, player: result.player })
       broadcastState(id)
     } catch (err) {
@@ -210,7 +217,9 @@ io.on('connection', (socket) => {
     console.log(`[Socket] Desconectado: ${socket.id}`)
     if (currentRoomId) {
       removePlayer(currentRoomId, socket.id)
-      broadcastState(currentRoomId)
+      // Broadcast solo si la sala sigue existiendo (puede haberse eliminado)
+      const stillExists = getRoom(currentRoomId)
+      if (stillExists) broadcastState(currentRoomId)
     }
   })
 })
@@ -227,4 +236,18 @@ server.listen(PORT, '0.0.0.0', () => {
   console.log(`\n  ✅ Servidor activo en: http://localhost:${PORT}`)
   console.log(`  🌐 Acceso LAN:         http://<tu-IP>:${PORT}`)
   console.log(`  🏓 Healthcheck:        http://localhost:${PORT}/api/health\n`)
+})
+
+// -------------------------------------------------------------------
+// Prevenir crash del servidor por errores no capturados
+// -------------------------------------------------------------------
+process.on('uncaughtException', (err) => {
+  console.error('\n⚠️  [uncaughtException] Error no capturado — el servidor sigue activo:')
+  console.error(`   ${err.message}`)
+  console.error(err.stack?.split('\n').slice(0, 4).join('\n'))
+})
+
+process.on('unhandledRejection', (reason) => {
+  console.error('\n⚠️  [unhandledRejection] Promesa rechazada sin capturar:')
+  console.error(`   ${reason}`)
 })
