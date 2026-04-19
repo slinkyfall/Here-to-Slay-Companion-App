@@ -1,0 +1,270 @@
+[
+  {
+    "id": "base_abyss_queen",
+    "name": "Abyss Queen",
+    "expansion": "base",
+    "req_heroes": 2,
+    "req_classes": [],
+    "target_roll": 8,
+    "penalty_roll": 5,
+    "effect": "Cada vez que otro jugador juega una carta de modificador en una de tus tiradas, +1 a esa tirada.",
+    "penalty": "Sacrifica un Héroe.",
+    "image": "AbyssQueen.png"
+  },
+  {
+    "id": "base_anuran_cauldron",
+    "name": "Anuran Cauldron",
+    "expansion": "base",
+    "req_heroes": 3,
+    "req_classes": [],
+    "target_roll": 7,
+    "penalty_roll": 6,
+    "effect": "Cada vez que haces una tirada, +1 a esa tirada.",
+    "penalty": "Sacrifica un Héroe.",
+    "image": "AnuranCauldron.png"
+  },
+  {
+    "id": "base_artic_aries",
+    "name": "Artic Aries",
+    "expansion": "base",
+    "req_heroes": 1,
+    "req_classes": [],
+    "target_roll": 10,
+    "penalty_roll": 6,
+    "effect": "Cada vez que consigas la tirada necesaria para usar el efecto de un héroe, agarra una carta del mazo y ponla en tu mano.",
+    "penalty": "Sacrifica un Héroe.",
+    "image": "ArticAries.png"
+  },
+  {
+    "id": "base_bloodwing",
+    "name": "Bloodwing",
+    "expansion": "base",
+    "req_heroes": 2,
+    "req_classes": [],
+    "target_roll": 10,
+    "penalty_roll": 6,
+    "effect": "Cada vez que otro jugador te haga un challenge, ese jugador debe descartar una carta.",
+    "penalty": "Sacrifica un Héroe.",
+    "image": "BloodWing.png"
+  },
+  {
+    "id": "base_corrupted_sabretooth",
+    "name": "Corrupted Sabretooth",
+    "expansion": "base",
+    "req_heroes": 3,
+    "req_classes": [],
+    "target_roll": 9,
+    "penalty_roll": 6,
+    "effect": "Cada vez que vas a destruir una carta de heroe, tu puedes robar ese heroe.",
+    "penalty": "Sacrifica un Héroe.",
+    "image": "CorruptenSabretooth.png"
+  },
+  {
+    "id": "base_crowned_serpent",
+    "name": "Crowned Serpent",
+    "expansion": "base",
+    "req_heroes": 2,
+    "req_classes": [],
+    "target_roll": 10,
+    "penalty_roll": 7,
+    "effect": "Cada vez que cualquier jugador(incluido tu), juega una carta de modificador, tu puedes agarrar una carta del mazo.",
+    "penalty": "Sacrifica un Héroe.",
+    "image": "CrownedSerpent.png"
+  },
+  {
+    "id": "base_dark_dragon_king",
+    "name": "Dark Dragon King",
+    "expansion": "base",
+    "req_heroes": 2,
+    "req_classes": [
+      "bard"
+    ],
+    "target_roll": 8,
+    "penalty_roll": 4,
+    "effect": "Cada vez que hagas una tirada para activar el efecto de un heroe, +1 a la tirada.",
+    "penalty": "Descarta 2 cartas.",
+    "image": "DarkDragonKing.png"
+  },
+  {
+    "id": "base_dracos",
+    "name": "Dracos",
+    "expansion": "base",
+    "req_heroes": 1,
+    "req_classes": [],
+    "target_roll": 8,
+    "penalty_roll": 5,
+    "effect": "Cada vez que una carta de heroe en tu party es destruida, tu puedes agarrar una carta del mazo.",
+    "penalty": "Elimina esta carta de monstruo del juego.",
+    "image": "Dracos.png"
+  },
+  {
+    "id": "base_malamammoth",
+    "name": "Malamammoth",
+    "expansion": "base",
+    "req_heroes": 2,
+    "req_classes": [
+      "ranger"
+    ],
+    "target_roll": 8,
+    "penalty_roll": 4,
+    "effect": "Cada vez que tu agarres una carta de item del mazo, tu puedes jugarla inmediatamente.",
+    "penalty": "Descarta 2 cartas.",
+    "image": "Malamammoth.png"
+  },
+  {
+    "id": "base_mega_slime",
+    "name": "Mega Slime",
+    "expansion": "base",
+    "req_heroes": 4,
+    "req_classes": [],
+    "target_roll": 8,
+    "penalty_roll": 7,
+    "effect": "Tu puedes usar un punto de acción extra en cada uno de tus turnos.",
+    "penalty": "Sacrifica un Héroe.",
+    "image": "MegaSlime.png"
+  },
+  {
+    "id": "base_orthus",
+    "name": "Orthus",
+    "expansion": "base",
+    "req_heroes": 2,
+    "req_classes": [
+      "wizard"
+    ],
+    "target_roll": 8,
+    "penalty_roll": 4,
+    "effect": "Cada vez que agarres una carta de magia del mazo, tu puedes jugarla inmediatamente.",
+    "penalty": "Descarta 2 carta.",
+    "image": "Orthus.png"
+  },
+  {
+    "id": "base_rex_major",
+    "name": "Rex Major",
+    "expansion": "base",
+    "req_heroes": 2,
+    "req_classes": [
+      "guardian"
+    ],
+    "target_roll": 8,
+    "penalty_roll": 4,
+    "effect": "Cada vez que tu agarres una carta de modificador del mazo, tu puedes revelarla y agarrar una sefgunda carta del mazo.",
+    "penalty": "Descarta 2 carta.",
+    "image": "RexMajor.png"
+  },
+  {
+    "id": "base_terratuga",
+    "name": "Terratuga",
+    "expansion": "base",
+    "req_heroes": 1,
+    "req_classes": [],
+    "target_roll": 11,
+    "penalty_roll": 7,
+    "effect": "Tus cartas de heroe no pueden ser destruidas.",
+    "penalty": "Sacrifica un Héroe.",
+    "image": "Terratuga.png"
+  },
+  {
+    "id": "base_titan_wyvern",
+    "name": "Titan Wyvern",
+    "expansion": "base",
+    "req_heroes": 2,
+    "req_classes": [
+      "fighter"
+    ],
+    "target_roll": 8,
+    "penalty_roll": 4,
+    "effect": "Cada vez que tu haces una tirada por una carta de challenge, +1 a la tirada.",
+    "penalty": "Descarta 2 cartas.",
+    "image": "TitanWyvern.png"
+  },
+  {
+    "id": "base_warworn_owlbear",
+    "name": "Warworn Owlbear",
+    "expansion": "base",
+    "req_heroes": 2,
+    "req_classes": [
+      "thief"
+    ],
+    "target_roll": 8,
+    "penalty_roll": 4,
+    "effect": "Tus cartas de item no pueden ser retadas por un challenge.",
+    "penalty": "Descarta 2 cartas.",
+    "image": "WarwornOwlbear.png"
+  },
+  {
+    "id": "wd_feral_dragon",
+    "name": "Feral Dragon",
+    "expansion": "warriors_druids",
+    "req_heroes": 2,
+    "req_classes": [],
+    "target_roll": 9,
+    "penalty_roll": 6,
+    "effect": "Cada vez que cualquiere jugador va a sacrificar una carta, agarra una carta del mazo.",
+    "penalty": "Sacrifica un Héroe.",
+    "image": "FeralDragon.png"
+  },
+  {
+    "id": "wd_muscipula_rex",
+    "name": "Muscipula Rex",
+    "expansion": "warriors_druids",
+    "req_heroes": 3,
+    "req_classes": [],
+    "target_roll": 10,
+    "penalty_roll": 7,
+    "effect": "Una vez por turno en tu turno, puedes agarrar una carta del mazo sin usar puntos de acción.",
+    "penalty": "Sacrifica un Héroe.",
+    "image": "MuscipulaRex.png"
+  },
+  {
+    "id": "bn_doombringer",
+    "name": "Doombringer",
+    "expansion": "berserkers_necromancers",
+    "req_heroes": 2,
+    "req_classes": [
+      "necromancer"
+    ],
+    "target_roll": 8,
+    "penalty_roll": 4,
+    "effect": "Cada vez que tu vas a sacrificar una carta, puedes escoger una carta de la pila de descarte y agregarla a tu mano.",
+    "penalty": "Descarta tu mano.",
+    "image": "Doombringer.png"
+  },
+  {
+    "id": "bn_reptilian_ripper",
+    "name": "Reptilian Ripper",
+    "expansion": "berserkers_necromancers",
+    "req_heroes": 2,
+    "req_classes": [
+      "berserker"
+    ],
+    "target_roll": 7,
+    "penalty_roll": 6,
+    "effect": "Cada vez que haces una tirada para atacar a un monstruo, +2 a esa tirada.",
+    "penalty": "Sacrifica 2 Héroes.",
+    "image": "ReptilianRipper.png"
+  },
+  {
+    "id": "extra_chitin_scourge",
+    "name": "Chitin Scourge",
+    "expansion": "extra",
+    "req_heroes": 3,
+    "req_classes": [],
+    "target_roll": 8,
+    "penalty_roll": 6,
+    "effect": "Cada vez que otro jugador hace una tirada para atacar a un monstruo, -1 a esa tirada.",
+    "penalty": "Sacrifica un Héroe.",
+    "image": "ChitinScourge.png"
+  },
+  {
+    "id": "extra_razor_tongue",
+    "name": "Razor Tongue",
+    "expansion": "extra",
+    "req_heroes": 2,
+    "req_classes": [],
+    "target_roll": 9,
+    "penalty_roll": 5,
+    "effect": "Cada vez que otro jugador descarta cualquier numero de cartas, agarra una carta del mazo.",
+    "penalty": "Descarta 2 cartas.",
+    "image": "RazorTongue.png"
+  }
+]
